@@ -8,7 +8,7 @@
     input{font-size: 14px;}
     body,ul,div,html{padding: 0;margin: 0;}
     .hidden{display: none;}
-    .main{width: 800px;margin: 0 auto;}
+    .main{width: 600px;margin: 0 auto;}
     li{list-style-type: none;line-height: 40px;position: relative;border: 1px solid transparent;padding: 0 20px;}
     li .status-span{display: block;width: 10px;height: 10px;background: #ccc;margin: 14px 10px 0 0 ;float: left;}
     li .status-span.status-end{
@@ -27,15 +27,21 @@
 </head>
 <body>
 <div id="app" class="main">
-  <h1>搜索</h1>
-  <input type="text" class="text-keyword" placeholder="输入想要搜索问题后，按回车确认" @keyup.13='addList' v-model="addText"/>
+  <h1>~~~~~搜搜~~~~~</h1>
+  <input type="radio" name="chooseType" checked="true" /><label>大学物理</label>
+  <input type="radio" name="chooseType" /><label>高等数学</label>
+  <input type="radio" name="chooseType" /><label>线性代数</label>
+  <div>
+  <input type="text" class="text-keyword" placeholder="输入想要搜索问题后，点击‘搜索’按钮" />
+    <button type="button">搜索</button>
+  </div>
   <div class="list">
     <h3>添加问题</h3>
     <input type="text" class="text-keyword" placeholder="输入问题后，按回车确认" @keyup.13='addList' v-model="addText"/>
     <!--如果noend等于0，就是全部完成了就显示‘全部完成了’，如果没有就是显示已完成多少条（prolist.length-noend）和未完成多少条（noend）-->
     <p>共有{{prolist.length}}个问题，{{noend==0?"全部已解答":'已获得解答'+(prolist.length-noend)+'，还有'+noend+'个未得到解答'}}</p>
     <p>
-      <input type="radio" name="chooseType" checked="true" @click='chooseList(1)'/><label>所有问题</label>
+      <input type="radio" name="chooseType" checked="true"  @click='chooseList(1)'/><label>所有问题</label>
       <input type="radio" name="chooseType" @click='chooseList(2)'/><label>已被解答的问题</label>
       <input type="radio" name="chooseType" @click='chooseList(3)'/><label>未被解答的问题</label>
     </p>
