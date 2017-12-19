@@ -28,6 +28,7 @@
 <body>
 <div id="app" class="main">
   <h1>~~~~~搜搜~~~~~</h1>
+
   <input type="radio" name="chooseType" checked="true" /><label>大学物理</label>
   <input type="radio" name="chooseType" /><label>高等数学</label>
   <input type="radio" name="chooseType" /><label>线性代数</label>
@@ -62,7 +63,7 @@
 <script type="text/javascript">
   new Vue({
     el: "#app",
-    data: {
+    data:{
       addText:'',
       //name-名称,status-完成状态
       prolist:[
