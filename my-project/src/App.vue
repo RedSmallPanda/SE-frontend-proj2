@@ -3,6 +3,8 @@
     <my-nav />
     <router-view></router-view>
     <my-footer />
+    <img src="./assets/search2.png">
+    <router-view></router-view>
   </div>
 </template>
 
@@ -13,6 +15,7 @@ name: 'app'
 </script>
 
 <style>
+  @import './assets/css/public.css';
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
