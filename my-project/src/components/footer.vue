@@ -1,6 +1,7 @@
 <template>
   <div class="footer fixed">
     <ul>
+      <li><router-link to='/'>首页</router-link></li>
       <li><router-link to='/manage'>问题</router-link></li>
     </ul>
   </div>
