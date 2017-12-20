@@ -17,21 +17,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-<<<<<<< HEAD
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/',
+      name: 'Index',
+      component: Index
+    },
+    {
+      path: '/manage',
+      name: 'Manage',
+      component: Manage
     }
   ]
-=======
-
-    name: 'Index',
-  component: Index
-},
-{
-  path: '/manage',
-    name: 'Manage',
-  component: Manage
-  }
-]
->>>>>>> 99e2162d1d217cc9979e3e68a9ef3f781d8fc6bc
-})
+});
