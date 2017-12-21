@@ -7,7 +7,7 @@
 			<button v-on:click="addName">确定</button>
 			<button v-on:click="cancel">取消</button>
 		</div>
-	<ul class="content-ul">
+<ul>
 		<li class="content-li" v-for="(value,index) in anwsers">
 			<div class="header">
 				<img :src="value.photo" />
@@ -21,25 +21,19 @@
 			</div>-->
 			<div class="text-content">{{value.content}}</div>
 		</li>
-		</ul>
+	</ul>
 		<!--footer-nav v-bind:class="{'isManage':isNowPage}"></footer-nav-->
 	</div>
 </template>
 
 <script>
-	//import footerNav from '../../components/footer.vue'
 	export default{
-		/*components: {
-			footerNav
-		},*/
 		data(){
 			return{
 				isNowPage: true,
 				showAdd: false,
-				//lightened:false,
-				//upNum:0,
 				anwsers:[
-				{'is_uped' : false,photo:'../../static/1.jpg','name':'用户1','content':'此开卷第一回也。作者自云：曾历过一番梦幻之后，故将真事隐去，而借通灵说此《石头记》一书也，故曰“甄士隐”云云。但书中所记何事何人?自己又云：“今风尘碌碌，一事无成，忽念及当日所有之女子：一一细考较去，觉其行止见识皆出我之上。我堂堂须眉诚不若彼裙钗，我实愧则有馀，悔又无益，大无可如何之日也。当此日，欲将已往所赖天恩祖德，锦衣纨之时，饫甘餍肥之日，背父兄教育之恩，负师友规训之德，以致今日一技无成、半生潦倒之罪，编述一集，以告天下；知我之负罪固多，然闺阁中历历有人，万不可因我之不肖，自护己短，一并使其泯灭也。','ups':0},
+				{'is_uped' : false,photo:'../../static/1.jpg','name':'用户1','content':'此开卷第一回也','ups':6660},
 				{'is_uped' : false,photo:'../../static/2.jpg','name':'用户2','content':'nothing is everything going to waste.','ups':0},
 				{'is_uped' : false,photo:'../../static/3.jpg','name':'用户3','content':'he is no rich.','ups':0}],
 				nameValue: '',				
@@ -51,13 +45,13 @@
 			},
 			cancel(){
 			this.showAdd = false
-				alert("ooooo")
 			},
 			addName(){
 				var v = this.nameValue
 				if(v.trim() == ""){
 					alert("答案不能为空")
 				}else{
+					
 					var newan = {}
 					newan.is_uped = false
 					newan.photo = '../../static/4.jpg'		
@@ -65,11 +59,12 @@
 					newan.content = v
 					newan.ups = 0
 					this.anwsers.push(newan)
-					//this.showAdd = false
+					this.showAdd = false
 				}
 			},
-			sueUp(e){
+			setUp(e){
 				var id = e.target.offsetParent.id
+				alert(id)
 				if(this.anwsers[id].is_uped == false){
 				this.anwsers[id].ups++
 				this.anwsers[id].is_uped = true
@@ -117,6 +112,7 @@
 
 
 	.content-li {
+		position:relative;
 		box-sizing: border-box;
 		padding: 0 0.2rem;
 		background: #fff;

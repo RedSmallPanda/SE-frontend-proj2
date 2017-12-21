@@ -14,7 +14,7 @@ export default new Router({
       	component: Index
     },*/
     {
-    	path: '/',
+    	path: '/search',
        	name: 'Manage',
    		component: Manage
     }
