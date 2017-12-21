@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <my-nav />
-    <router-view></router-view>
-    <my-footer />
     <img src="./assets/search2.png">
     <router-view></router-view>
   </div>

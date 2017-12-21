@@ -7,16 +7,19 @@
       <input type="password" placeholder="请输入密码" v-model="password">
       <button v-on:click="login">登录</button>
       <span v-on:click="ToRegister">没有账号？马上注册</span>
+      <footer-nav v-bind:class="{'isIndex':isNowPage}"></footer-nav>
     </div>
 
     <div class="register-wrap" v-show="showRegister">
       <h3>注册</h3>
       <p v-show="showTishi">{{tishi}}</p>
-      <input type="text" placeholder="请输入用户名" v-model="newUsername">
-      <input type="password" placeholder="请输入密码" v-model="newPassword">
+      <input type="text" placeholder="请输入用户名" v-model="usename">
+      <input type="password" placeholder="请输入密码" v-model="password">
       <button v-on:click="register">注册</button>
       <span v-on:click="ToLogin">已有账号？马上登录</span>
+
     </div>
+
   </div>
 </template>
 
@@ -30,9 +33,13 @@
 </style>
 
 <script>
+  import FooterNav from '@/components/footer.vue'
   export default{
+    components: {
+      FooterNav
+    },
     data(){
-      return{
+      return {
         showLogin: true,
         showRegister: false,
         showTishi: false,
@@ -41,6 +48,19 @@
         password: '',
         newUsername: '',
         newPassword: ''
+      }
+    },
+    methods: {
+        login(){
+
+        },
+      ToRegister(){
+        this.showRegister = true
+        this.showLogin = false
+      },
+      ToLogin(){
+        this.showRegister = false
+        this.showLogin = true
       }
     }
   }

@@ -1,14 +1,15 @@
 <template>
   <div class="manage tc">
-    <div class="input-area">
-    <input type="text" placeholder="请输入问题">
-    <button >搜索</button><br><br>
+    <div class="input-area1" v-show="!showAdd">
+      <input type="text" placeholder="请输入问题">
+      <button >搜索</button><br><br>
     </div>
-    <button v-on:click="add">提出问题</button>
+    <button v-on:click="add" v-show="addqu">搜不到答案？问大家</button>
     <div class="input-area" v-show="showAdd">
-      <input type="text" placeholder="请输入问题" v-model="nameValue">
+      <input type="text" placeholder="请添加问题" v-model="nameValue">
       <button v-on:click="addName">确定</button>
     </div>
+    <button v-on:click="add" v-show="showAdd">返回搜索</button>
     <table>
       <tr>
         <th>我提出的问题</th>
@@ -36,8 +37,10 @@
   .manage{padding-bottom:50px;}
   .manage >button{width:200px; height:40px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:16px; color:#fff;}
   table{width:100%; max-width:500px; margin:0 auto; margin-top:20px;}
-  .input-area input{width: 200px; height: 40px; line-height:40px; margin:20px 0; outline:none; border:1px solid #333;}
+  .input-area input{width: 200px; height: 40px; line-height:40px; margin:20px auto; outline:none; border:1px solid #333;}
   .input-area button{ width:60px; height: 40px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:16px; color:#fff;}
+  .input-area1 input{width: 600px; height: 40px; line-height:40px; margin:20px auto; outline:none; border:1px solid #333;}
+  .input-area1 button{ width:60px; height: 40px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:16px; color:#fff;}
   th,td{width:100px;}
   tr input{width:100px; height:30px; padding-left:10px; outline:none; border:1px solid #333;}
   .wrap{display:table; position:fixed; top:0; left:0; height:100%; width:100%; background:rgba(0,0,0,.8); z-index: 10;}
@@ -54,6 +57,7 @@
     },
     data(){
       return{
+          addqu:true,
         isNowPage: true,
         showAdd: false,
         showEdit: false,
@@ -65,7 +69,8 @@
     },
     methods: {
       add(){
-        this.showAdd = true
+        this.showAdd = !this.showAdd
+        this.addqu = !this.showAdd
       },
       addName(){
         var v = this.nameValue
