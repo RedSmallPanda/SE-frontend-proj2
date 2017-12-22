@@ -1,5 +1,6 @@
 <template>
 	<div class="manage tc">	
+		<button v-on:click="back">回到搜题页</button>
 		<button v-on:click="add">添加答案</button>
 		<div class="input-area" v-show="showAdd">
 			<input type="text" placeholder="请输入您的答案" v-model="nameValue">
@@ -39,6 +40,9 @@
 			cancel(){
 			this.showAdd = false
 			},
+			back(){
+				this.$router.push('/manage')
+			},
 			addName(){
 				var v = this.nameValue
 				if(v.trim() == ""){
@@ -77,7 +81,8 @@
 
 <style scoped>
 	.manage{padding: 20px;}
-	.manage >button{width:300px; height:50px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:30px; color:#fff;}
+	.manage >button{width:300px; height:50px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:20px; color:#fff;}
+	.manage >router-link{width:300px; height:50px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:30px; color:#fff;}
 	.input-area input{width: 800px; height: 40px; line-height:40px; margin:20px 0; outline:none; border:1px solid #333;}
 	.input-area button{ width:60px; height: 40px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:16px; color:#fff;}
 
