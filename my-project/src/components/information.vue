@@ -42,9 +42,8 @@
     </div>
 
     <div id="footer">
-
     </div>
-
+    <footer-nav v-bind:class="{'isIndex':isNowPage}"></footer-nav>
   </div>
 
 </template>
@@ -89,3 +88,11 @@
     bottom:0;
   }
 </style>
+<script>
+  import FooterNav from '@/components/footer.vue'
+  export default{
+    components: {
+      FooterNav
+    }
+  }
+</script>

@@ -5,21 +5,20 @@
       <p v-show="showTishi">{{tishi}}</p>
       <input type="text" placeholder="请输入用户名" v-model="username">
       <input type="password" placeholder="请输入密码" v-model="password">
-      <button v-on:click="login">登录</button>
+      <router-link :to="{ path:'/info',name:'Information'}">
+      <button >登录</button></router-link>
       <span v-on:click="ToRegister">没有账号？马上注册</span>
-      <footer-nav v-bind:class="{'isIndex':isNowPage}"></footer-nav>
     </div>
 
     <div class="register-wrap" v-show="showRegister">
       <h3>注册</h3>
       <p v-show="showTishi">{{tishi}}</p>
-      <input type="text" placeholder="请输入用户名" v-model="usename">
-      <input type="password" placeholder="请输入密码" v-model="password">
-      <button v-on:click="register">注册</button>
+      <input type="text" placeholder="请输入用户名" v-model="newUsername">
+      <input type="password" placeholder="请输入密码" v-model="newPassword">
+      <button >注册</button>
       <span v-on:click="ToLogin">已有账号？马上登录</span>
-
     </div>
-
+    <footer-nav v-bind:class="{'isIndex':isNowPage}"></footer-nav>
   </div>
 </template>
 
