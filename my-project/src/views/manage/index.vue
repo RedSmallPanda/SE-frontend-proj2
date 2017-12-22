@@ -1,5 +1,6 @@
 <template>
   <div class="manage tc">
+    <img src="../../assets/background.png" width="400" height="160">
     <div class="input-area1" v-show="!showAdd">
       <input type="text" placeholder="请输入问题"v-model="question">
       <button v-on:click = "searchRes">搜索</button><br><br>

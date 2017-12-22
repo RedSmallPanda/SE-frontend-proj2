@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/search2.png">
     <router-view></router-view>
   </div>
 </template>
@@ -15,6 +14,7 @@
 
   @import './assets/css/public.css';
   #app {
+    padding-top: 30px;
     background-color: rgba(213, 215, 217, .15);
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

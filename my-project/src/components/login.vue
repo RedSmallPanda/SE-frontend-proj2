@@ -1,5 +1,6 @@
 <template>
   <div>
+    <img src="../assets/background.png" width="400" height="160">
     <div class="login-wrap" v-show="showLogin">
       <h3>登录</h3>
       <p v-show="showTishi">{{tishi}}</p>
