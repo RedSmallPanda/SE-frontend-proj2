@@ -18,7 +18,7 @@
       <button >注册</button>
       <span v-on:click="ToLogin">已有账号？马上登录</span>
     </div>
-    <footer-nav v-bind:class="{'isIndex':isNowPage}"></footer-nav>
+
   </div>
 </template>
 
@@ -46,7 +46,8 @@
         username: '',
         password: '',
         newUsername: '',
-        newPassword: ''
+        newPassword: '',
+        isNowPage: true
       }
     },
     methods: {
