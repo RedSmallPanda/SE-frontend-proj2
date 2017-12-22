@@ -34,7 +34,7 @@
 
 
       <div id="section">
-        <h1>个人简介</h1>
+        <h2>个人简介</h2>
         <p>
           We are all in the position of the farmer. If we plant a good seed, we reap a good harvest. If our seed is poor and full of weeds, we reap a useless crop. If we plant nothing at all, we harvest nothing at all. I want the future to be better than the past.
         </p>
@@ -43,7 +43,9 @@
           I do not want it contaminated by the mistakes and errors with which history is filled.
         </p>
       </div>
-
+        <div id="foot">
+  
+        </div>
     </div>
     <div id= "footer">
       <footer-nav v-bind:class="{'isIndex':isNowPage}"></footer-nav>
@@ -81,8 +83,17 @@
     float:left;
     padding:10px;
     text-align: left;
-    color:black;
+    color:#555;
+ line-height: 25px;
+ text-indent: 30px;
   }
+  #foot {
+    background-color:#C0C0C0;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:10px; 
+}
   #name{
     font-size:40px;
   }
