@@ -6,6 +6,8 @@ import Hello from '@/components/Hello'
 import Index from '../views/index/index'
 import Manage from '../views/manage/index'
 import Search from '../views/search/index'
+import Information from '@/components/information'
+
 
 
 Vue.use(Router)
@@ -37,6 +39,11 @@ export default new Router({
       path: '/manage',
       name: 'Manage',
       component: Manage
+    },
+    {
+      path: '/info',
+      name: 'Information',
+      component: Information
     }
   ]
 });

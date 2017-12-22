@@ -1,8 +1,8 @@
 <template>
   <div class="footer fixed">
     <ul>
-      <li><router-link to='/'>首页</router-link></li>
-      <li><router-link to='/manage'>问题</router-link></li>
+      <li><router-link to='/info'>主页</router-link></li>
+      <li><router-link to='/manage'>搜索</router-link></li>
     </ul>
   </div>
 </template>
@@ -16,4 +16,5 @@
   .isIndex li:first-child a{color:#41b883;}
   .isManage li:last-child{background-color:#d3d3d3;}
   .isManage li:last-child a{color:#41b883;}
+
 </style>
