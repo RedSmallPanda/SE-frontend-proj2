@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-//import Hello from '@/components/Hello'
-//import Index from '../views/index/index'
-import Manage from '../views/search/index'
+import Search from '../views/search/index'
 
 Vue.use(Router)
 
@@ -15,8 +13,8 @@ export default new Router({
     },*/
     {
     	path: '/search',
-       	name: 'Manage',
-   		component: Manage
+       	name: 'Search',
+   		component: Search
     }
   ]
 })

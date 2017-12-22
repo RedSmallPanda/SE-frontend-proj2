@@ -1,6 +1,5 @@
 <template>
-	<div class="manage tc">
-	
+	<div class="manage tc">	
 		<button v-on:click="add">添加答案</button>
 		<div class="input-area" v-show="showAdd">
 			<input type="text" placeholder="请输入您的答案" v-model="nameValue">
@@ -17,8 +16,6 @@
 			<div class="text-content">{{value.content}}</div>
 			<span class="problem" v-on:click="report">答案不正确？</span>
 		</div>
-	
-		<!--footer-nav v-bind:class="{'isManage':isNowPage}"></footer-nav-->
 	</div>
 </template>
 
@@ -79,7 +76,7 @@
 </script>
 
 <style scoped>
-	.manage{padding-bottom:50px;}
+	.manage{padding: 20px;}
 	.manage >button{width:300px; height:50px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:30px; color:#fff;}
 	.input-area input{width: 800px; height: 40px; line-height:40px; margin:20px 0; outline:none; border:1px solid #333;}
 	.input-area button{ width:60px; height: 40px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:16px; color:#fff;}
@@ -93,8 +90,8 @@
 		margin-top: 0.7rem;
 		margin-left: 10rem;
 		margin-right: 10rem;
-		box-shadow: 0 -4px 4px rgba(213, 215, 217, .8),
-		0 2px 2px rgba(213, 215, 217, .8);		
+		box-shadow: 0 -4px 4px rgba(213, 215, 217, 0.9),
+		0 2px 2px rgba(213, 215, 217,0.9);		
 		}
            .header {
 			/* position:relative;*/
