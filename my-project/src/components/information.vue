@@ -10,7 +10,7 @@
       </div>
 
       <div id="header">
-        <h1 >个人资料</h1>
+        <h2 >个人资料</h2>
 
       </div>
 
@@ -34,7 +34,7 @@
 
 
       <div id="section">
-        <h2>个人简介</h2>
+        <h3>个人简介</h3>
         <p>
           We are all in the position of the farmer. If we plant a good seed, we reap a good harvest. If our seed is poor and full of weeds, we reap a useless crop. If we plant nothing at all, we harvest nothing at all. I want the future to be better than the past.
         </p>
@@ -68,6 +68,7 @@
     color:white;
     text-align:center;
     padding:6px;
+    letter-spacing: 15px;
   }
   #nav {
     line-height:30px;
@@ -93,6 +94,7 @@
     clear:both;
     text-align:center;
     padding:10px; 
+    height:20px;
 }
   #name{
     font-size:40px;
