@@ -59,9 +59,9 @@
   }
   #total{
     width: 1000px;
-    margin: 10px auto;
+    margin: 0px auto;
     padding: 10px;
-    padding-bottom: 500px ;
+    padding-bottom: 50px ;
   }
   #header {
     background-color:#C0C0C0;
@@ -69,6 +69,7 @@
     text-align:center;
     padding:6px;
     letter-spacing: 15px;
+    margin-top: 70px;
   }
   #nav {
     line-height:30px;
@@ -105,7 +106,7 @@
 
   }
   button{display:block; width:250px; height:40px; line-height: 40px;
-    margin:0 auto; border:none; background-color:#41b883;
+    margin:0 auto; border:none; background-color:#009933;
     color:#fff; font-size:16px; margin-bottom:5px;}
 </style>
 <script>

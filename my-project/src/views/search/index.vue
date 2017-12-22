@@ -81,10 +81,11 @@
 
 <style scoped>
 	.manage{padding: 20px;}
-	.manage >button{width:300px; height:40px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:16px; color:#fff;}
-	.manage >router-link{width:300px; height:40px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:16px; color:#fff;}
+	.title{text-align: center;font-size: 30px;letter-spacing: 30px;color: #fff;margin-top: 40px;margin-bottom: 40px;background-color:#ddd;height:50px;float:center;border-radius:5px;}
+	.manage >button{width:300px; height:40px; line-height:40px; background-color:#339933; border: none; border-radius:5px; font-size:16px; color:#fff;margin-top: 40px;margin-bottom: 40px;}
+	.manage >router-link{width:300px; height:40px; line-height:40px; background-color:#339933; border: none; border-radius:5px; font-size:16px; color:#fff;}
 	.input-area input{width: 800px; height: 40px; line-height:40px; margin:20px 0; outline:none; border:1px solid #333;}
-	.input-area button{ width:60px; height: 40px; line-height:40px; background-color:#41b883; border: none; border-radius:5px; font-size:16px; color:#fff;}
+	.input-area button{ width:60px; height: 40px; line-height:40px; background-color:#339933; border: none; border-radius:5px; font-size:16px; color:#fff;}
 
 
 	.content-li {
@@ -93,8 +94,8 @@
 		padding: 0 0.2rem;
 		background: #fff;
 		margin-top: 0.7rem;
-		margin-left: 10rem;
-		margin-right: 10rem;
+		margin-left: 12rem;
+		margin-right: 12rem;
 		box-shadow: 0 -4px 4px rgba(213, 215, 217, 0.9),
 		0 2px 2px rgba(213, 215, 217,0.9);		
 		}
@@ -152,10 +153,11 @@
 				}
 			
 		.text-content {
-			color: #474747;
+			color: #555;
 			font-size:1.0rem;
 			line-height:2rem;
 			padding: 3rem 3rem;
+			text-align: left;
 		}
 		
 </style>
