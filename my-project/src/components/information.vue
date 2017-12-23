@@ -17,7 +17,7 @@
       <div id="nav">
         <div id="chat">
           <router-link :to="{path:'/'}">
-          <button>注销</button>
+            <button>注销</button>
           </router-link>
         </div>
 
@@ -42,6 +42,10 @@
         <p>
           I do not want it contaminated by the mistakes and errors with which history is filled.
         </p>
+      </div>
+
+      <div id="foot">
+
       </div>
 
     </div>
@@ -83,6 +87,15 @@
     text-align: left;
     color:black;
   }
+
+  #foot {
+    background-color:#C0C0C0;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:10px;
+  }
+
   #name{
     font-size:40px;
   }
@@ -102,8 +115,8 @@
       FooterNav
     },
     data(){
-        return{
-          isNowPage: true
+      return{
+        isNowPage: true
       }
 
     }
