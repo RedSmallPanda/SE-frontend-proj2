@@ -1,7 +1,7 @@
 <template>
   <div class="footer fixed">
     <ul>
-      <li><router-link to='/info'>主页</router-link></li>
+      <li><router-link to='/info'>个人主页</router-link></li>
       <li><router-link to='/manage'>搜索</router-link></li>
     </ul>
   </div>

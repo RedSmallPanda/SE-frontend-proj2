@@ -42,7 +42,7 @@
   .input-area button{ width:60px; height: 40px; line-height:40px; background-color:#339933; border: none; border-radius:5px; font-size:16px; color:#fff;}
   .input-area1 input{width: 600px; height: 40px; line-height:40px; margin:20px auto; outline:none; border:1px solid #333;}
   .input-area1 button{ width:60px; height: 40px; line-height:40px; background-color:#339933; border: none; border-radius:5px; font-size:16px; color:#fff;}
-  th,td{width:100px;color: #555;padding:10px}
+  th,td{letter-spacing:1px;width:100px;color: #555;padding:10px}
   tr input{width:100px; height:30px; padding-left:10px; outline:none; border:1px solid #333;}
   .wrap{display:table; position:fixed; top:0; left:0; height:100%; width:100%; background:rgba(0,0,0,.8); z-index: 10;}
   .wrap .content{display:table-cell; vertical-align:middle;}

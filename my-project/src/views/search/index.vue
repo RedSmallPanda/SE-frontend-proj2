@@ -1,7 +1,7 @@
 <template>
 	<div class="manage tc">	
 		<button v-on:click="back">回到搜题页</button>
-		<button v-on:click="add">添加答案</button>
+		<button v-on:click="add">我要回答</button>
 		<div class="input-area" v-show="showAdd">
 			<input type="text" placeholder="请输入您的答案" v-model="nameValue">
 			<button v-on:click="addName">确定</button>
@@ -158,6 +158,7 @@
 			line-height:2rem;
 			padding: 3rem 3rem;
 			text-align: left;
+			letter-spacing:1px;
 		}
 		
 </style>
