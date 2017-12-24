@@ -7,7 +7,7 @@
       <p v-show="showTishi">{{tishi}}</p>
       <input type="text" placeholder="请输入用户名" v-model="username">
       <input type="password" placeholder="请输入密码" v-model="password">
-      <router-link :to="{ path:'/manage',name:'Information'}">
+      <router-link :to="{ path:'/info',name:'Information'}">
       <button >登录</button></router-link>
       <span v-on:click="ToRegister">没有账号？马上注册</span>
     </div>

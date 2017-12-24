@@ -8,16 +8,15 @@
 			<button v-on:click="cancel">取消</button>
 		</div>
 
-		<div class="content-li" v-for="(value,index) in anwsers"v-bind:id="index">
-			<div class="header">
-				<img :src="value.photo" />
-				<span class="name">{{value.name}}</span>
-				<span class="com-up" :class="[value.is_uped ? 'is-uped' : ' ']" v-on:click="setUp">{{value.ups}}</span>			
-			</div>
-			<div class="text-content">{{value.content}}</div>
-			<span class="problem" v-on:click="report">答案不正确？</span>
-		</div>
-	</div>
+      <div class="content-li" v-for="(value,index) in anwsers"v-bind:id="index">
+        <div class="header">
+          <img :src="value.photo" />
+          <span class="name">{{value.name}}</span>
+          <span class="com-up" :class="[value.is_uped ? 'is-uped' : ' ']" v-on:click="setUp">{{value.ups}}</span>
+        </div>
+        <div class="text-content">{{value.content}}</div>
+        <span class="problem" v-on:click="report">答案不正确？</span>
+    </div>
 </template>
 
 <script>
@@ -30,7 +29,7 @@
 				{'is_uped' : false,photo:'../../static/1.jpg','name':'用户1','content':'此开卷第一回也','ups':135},
 				{'is_uped' : false,photo:'../../static/2.jpg','name':'用户2','content':'nothing is everything going to waste.','ups':47},
 				{'is_uped' : false,photo:'../../static/3.jpg','name':'用户3','content':'he is no rich.','ups':23}],
-				nameValue: '',				
+				nameValue: '',
 			}
 		},
 		methods: {
@@ -48,10 +47,10 @@
 				if(v.trim() == ""){
 					alert("答案不能为空")
 				}else{
-					
+
 					var newan = {}
 					newan.is_uped = false
-					newan.photo = '../../static/4.jpg'		
+					newan.photo = '../../static/4.jpg'
 					newan.name = '新用户'
 					newan.content = v
 					newan.ups = 0
@@ -97,7 +96,7 @@
 		margin-left: 12rem;
 		margin-right: 12rem;
 		box-shadow: 0 -4px 4px rgba(213, 215, 217, 0.9),
-		0 2px 2px rgba(213, 215, 217,0.9);		
+		0 2px 2px rgba(213, 215, 217,0.9);
 		}
            .header {
 			/* position:relative;*/
@@ -129,11 +128,11 @@
 					line-height: 0.5rem;
 					color: #FFFFFF;
 					background-color:#999;
-					border-radius:5px; 
+					border-radius:5px;
 					 margin-right:1rem;
 					 margin-top:-2.2rem;
 					 padding-top :0.5rem;
-			
+
 				}
 				.com-up {
 					float: right;
@@ -151,7 +150,7 @@
 					background: url("../../assets/upup2.svg") no-repeat 30%;
 					background-size: contain;
 				}
-			
+
 		.text-content {
 			color: #555;
 			font-size:1.0rem;
@@ -160,5 +159,5 @@
 			text-align: left;
 			letter-spacing:1px;
 		}
-		
+
 </style>
